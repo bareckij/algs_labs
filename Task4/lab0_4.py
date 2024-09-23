@@ -15,6 +15,7 @@ print(time.perf_counter() - start_time)
 finish_time = time.perf_counter()
 print('Time: ' + str(finish_time - start_time))
 
+
 start_time = time.perf_counter()
 fib1 = fib2 = 1
 num = open("Task4/input1.txt").read()
