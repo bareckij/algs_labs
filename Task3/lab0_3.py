@@ -1,4 +1,3 @@
-
 fib1 = fib2 = 1
 num = open("Task3/input3.txt").read()
 n = int(num)
