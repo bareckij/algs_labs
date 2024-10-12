@@ -7,7 +7,7 @@ new_nums = [num for num in nums if abs(num) <= abs(109)][:n]
 def insertion_sort(arr):
     def swap(a, b):
         arr[a], arr[b] = arr[b], arr[a]
-    for i in range(1, len(arr)):
+    for i in range(len(arr)):
         key = arr[i]
         j = i - 1
         while j >= 0 and arr[j] < key:
