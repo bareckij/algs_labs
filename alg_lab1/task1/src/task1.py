@@ -1,4 +1,10 @@
-input = open('task1/input.txt')
+import time
+import tracemalloc
+
+tracemalloc.start()
+t_start = time.perf_counter()
+
+input = open('task1/src/input.txt')
 n = int(input.readline().split()[0])    
 nums = list(map(int, input.readlines()[1].split()))
 new_nums = [num for num in nums if abs(num) <= abs(109)][:n]
@@ -13,4 +19,8 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
     return arr
-open('task1/output.txt', 'w').write(' '.join(map(str, insertion_sort(new_nums))))
+open('task1/src/soutput.txt', 'w').write(' '.join(map(str, insertion_sort(new_nums))))
+
+print("Time: %s second " % (time.perf_counter() - t_start))
+print("Memory used:", tracemalloc.get_traced_memory()[1] / (1024 ** 2), "MB" )
+tracemalloc.stop()

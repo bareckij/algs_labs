@@ -1,3 +1,7 @@
+input = open('task9/src/input.txt').readline().strip().split()
+first_number_from_list = list(map(int, input[0]))
+second_number_from_list = list(map(int, input[1]))
+
 def add_two_binary(first_number, second_number):
     n = max(len(first_number), len(second_number))
 
@@ -13,4 +17,8 @@ def add_two_binary(first_number, second_number):
     result[0] = carry
     return result
 
-print(add_two_binary([1, 1, 1, 0], [1, 1, 1]))
+open('task9/src/output.txt', 'w').write(''.join(map(str, add_two_binary(first_number_from_list, second_number_from_list))).lstrip('0') or '0')
+
+print("Time: %s second " % (time.perf_counter() - t_start))
+print("Memory used:", tracemalloc.get_traced_memory()[1] / (1024 ** 2), "MB" )
+tracemalloc.stop()
