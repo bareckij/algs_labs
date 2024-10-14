@@ -7,7 +7,7 @@ t_start = time.perf_counter()
 input = open('task3/txtf/input.txt')
 n = int(input.readline().split()[0])    
 nums = list(map(int, input.readlines()[1].split()))
-new_nums = [num for num in nums if abs(num) <= abs(109)][:n]
+new_nums = [num for num in nums if abs(num) <= abs(10**9)][:n]
 
 
 def insertion_sort(arr):
