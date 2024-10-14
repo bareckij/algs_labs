@@ -4,7 +4,7 @@ import tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
 
-input = open('task3/input.txt')
+input = open('task3/src/input.txt')
 n = int(input.readline().split()[0])    
 nums = list(map(int, input.readlines()[1].split()))
 new_nums = [num for num in nums if abs(num) <= abs(109)][:n]

@@ -19,7 +19,7 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
     return arr
-open('task1/src/soutput.txt', 'w').write(' '.join(map(str, insertion_sort(new_nums))))
+open('task1/src/output.txt', 'w').write(' '.join(map(str, insertion_sort(new_nums))))
 
 print("Time: %s second " % (time.perf_counter() - t_start))
 print("Memory used:", tracemalloc.get_traced_memory()[1] / (1024 ** 2), "MB" )
