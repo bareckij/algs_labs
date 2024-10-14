@@ -1,3 +1,9 @@
+import time
+import tracemalloc
+
+tracemalloc.start()
+t_start = time.perf_counter()
+
 input = open('task9/src/input.txt').readline().strip().split()
 first_number_from_list = list(map(int, input[0]))
 second_number_from_list = list(map(int, input[1]))
