@@ -4,7 +4,7 @@ import tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
 
-input = open('task6/src/input.txt')
+input = open('task6/txtf/input.txt')
 n = int(input.readline().split()[0])    
 nums = list(map(int, input.readlines()[1].split()))
 new_nums = [num for num in nums if abs(num) <= abs(109)][:n]
@@ -20,7 +20,7 @@ def bubble_sort(arr):
             break
     return arr
 
-open('task6/src/output.txt', 'w').write(' '.join(map(str, bubble_sort(new_nums))))
+open('task6/txtf/output.txt', 'w').write(' '.join(map(str, bubble_sort(new_nums))))
 
 print("Time: %s second " % (time.perf_counter() - t_start))
 print("Memory used:", tracemalloc.get_traced_memory()[1] / (1024 ** 2), "MB" )
