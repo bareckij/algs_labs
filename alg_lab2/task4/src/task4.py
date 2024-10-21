@@ -11,15 +11,3 @@ def binary_search(arr, x):
         else:
             return mid
     return -1
-with open('alg_lab2/task4/textf/input.txt', 'r') as f:
-    n = int(f.readline().split()[0])
-    arr = list(map(int, f.readline().split()))
-    k = int(f.readline().split()[0])
-    search_nums = list(map(int, f.readline().split()))
-
-results = []
-for num in search_nums:
-    result = binary_search(arr, num)
-    results.append(result)
-with open('alg_lab2/task4/textf/output.txt', 'w') as f:
-    f.write(' '.join(map(str, results)))

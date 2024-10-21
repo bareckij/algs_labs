@@ -36,11 +36,3 @@ def merge_sort_without(arr, left, right):
         merge_without_inf(arr, left, mid, right)
 
 
-with open('alg_lab2/task1/textf/input_without.txt', 'r') as file:
-    n = int(file.readline())
-    arr = list(map(int, file.readline().split()))
-
-merge_sort_without(arr, 0, n-1)
-
-with open('alg_lab2/task1/textf/output_without.txt', 'w') as file:
-    file.write(' '.join(map(str, arr)))

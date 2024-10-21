@@ -15,11 +15,3 @@ def find_max_subarray(arr):
             start_index = i + 1
     
     return max_subarray
-
-with open('alg_lab2/task7/textf/input.txt', 'r') as f:
-    arr = list(map(int, f.readline().split()))
-
-max_sum = find_max_subarray(arr)
-
-with open('alg_lab2/task7/textf/output.txt', 'w') as f:
-    f.write(str(max_sum))
