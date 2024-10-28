@@ -1,18 +1,16 @@
 import time
 import tracemalloc
 from task1.src.task1 import merge_sort
+import utils
 
 tracemalloc.start()
 t_start = time.perf_counter()
-  
-with open('task1/textf/input.txt', 'r') as file:
-    n = int(file.readline())
-    arr = list(map(int, file.readline().split()))
 
-merge_sort(arr, 0, n-1)
+n= utils.read_data_from_file('task1/textf/input.txt')[0]
+arr= utils.read_data_from_file('task1/textf/input.txt')[1]
+data=merge_sort(arr, 0, n-1)
 
-with open('task1/textf/output.txt', 'w') as file:
-    file.write(' '.join(map(str, arr)))
+utils.write_data_to_file('task1/textf/output.txt', data)
 
 
 print('Тест примера')

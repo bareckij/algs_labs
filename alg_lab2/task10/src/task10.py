@@ -32,4 +32,5 @@ def merge_sort(arr, left, right):
         merge_sort(arr, mid + 1, right)
         if arr[mid] > arr[mid + 1]:  # Check for merge only if necessary
             merge(arr, left, mid, right)
+    return arr
 
