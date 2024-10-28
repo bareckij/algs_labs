@@ -6,11 +6,11 @@ import utils
 tracemalloc.start()
 t_start = time.perf_counter()
 
-n= utils.read_data_from_file('task1/textf/input.txt')[0]
-arr= utils.read_data_from_file('task1/textf/input.txt')[1]
+n= utils.read_data_from_file('alg_lab2/task1/textf/input.txt')[0]
+arr= utils.read_data_from_file('alg_lab2/task1/textf/input.txt')[1]
 data=merge_sort(arr, 0, n-1)
 
-utils.write_data_to_file('task1/textf/output.txt', data)
+utils.write_data_to_file('alg_lab2/task1/textf/output.txt', data)
 
 
 print('Тест примера')

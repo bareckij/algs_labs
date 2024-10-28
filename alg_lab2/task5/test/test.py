@@ -1,17 +1,17 @@
 import time
 import tracemalloc
-from task5.src.task5 import is_majority_element
+from alg_lab2.task5.src.task5 import is_majority_element
  
 tracemalloc.start()
 t_start = time.perf_counter()
   
-with open('task5/textf/input.txt', 'r') as f:
+with open('alg_lab2/task5/textf/input.txt', 'r') as f:
     n = int(f.readline().strip())
     A = list(map(int, f.readline().strip().split()))
 
 result = is_majority_element(A)
 
-with open('task5/textf/output.txt', 'w') as f:
+with open('alg_lab2/task5/textf/output.txt', 'w') as f:
     f.write(str(result))
 
 print('Тест примера')
