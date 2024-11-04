@@ -1,4 +1,3 @@
-
 def read_data_from_file(file_path: str):
     data = []
     with open(file_path, 'r') as file:
