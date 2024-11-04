@@ -6,12 +6,11 @@ tracemalloc.start()
 t_start = time.perf_counter()
 
 n, arr, k, search_nums = utils.read_data_from_file('alg_lab2/task4/textf/input.txt')
-
 results = []
 for num in search_nums:
     result = binary_search(arr, num)
     results.append(result)  
-utils.write_data_to_file('alg_lab2/task4/textf/input.txt', results)
+utils.write_data_to_file('alg_lab2/task4/textf/output.txt', results)
 
 print('Тест примера')
 print('Время работы: %s секунд' % (time.perf_counter() - t_start))
