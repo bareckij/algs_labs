@@ -1,6 +1,6 @@
 import time
 import tracemalloc
-from task1.src.task1 import merge_sort
+from alg_lab2.task1.src.task1 import merge_sort
 import utils
 
 tracemalloc.start()
