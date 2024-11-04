@@ -5,9 +5,9 @@ import utils
 
 tracemalloc.start()
 t_start = time.perf_counter()
-  
 
-n, arr, k, b_arr = utils.read_data_from_file('alg_lab2/task1/textf/input_without.txt')
+n, arr = utils.read_data_from_file('alg_lab2/task1/textf/input_without.txt')
+
 data = merge_sort(arr, 0, n-1)
 
 utils.write_data_to_file('alg_lab2/task1/textf/output_without.txt', data)
