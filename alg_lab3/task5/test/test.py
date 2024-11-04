@@ -1,16 +1,15 @@
 import time
 import tracemalloc
-from alg_lab2.task7.src.task7 import find_max_subarray
-import utils
+from alg_lab3.task5.src.task5 import h_index
+import utils 
 
 tracemalloc.start()
 t_start = time.perf_counter()
+  
+n, arr, k, b_arr = utils.read_data_from_file('alg_lab3/task5/textf/input.txt')
+result = h_index(arr)
 
-arr = utils.read_data_from_file('alg_lab2/task7/textf/input.txt')
-
-max_subarray = find_max_subarray(arr[0])
-
-utils.write_data_to_file('alg_lab2/task7/textf/output.txt', max_subarray)
+utils.write_data_to_file('alg_lab3/task5/textf/output.txt', str(result))
 
 print('Тест примера')
 print('Время работы: %s секунд' % (time.perf_counter() - t_start))
