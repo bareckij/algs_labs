@@ -26,11 +26,11 @@ def merge(arr, left, mid, right):
         k += 1
     
 def merge_sort(arr, left, right):
-    if left < right:  # Base case: stop recursion when sub-array has one element
+    if left < right:  
         mid = (left + right) // 2
         merge_sort(arr, left, mid)
         merge_sort(arr, mid + 1, right)
-        if arr[mid] > arr[mid + 1]:  # Check for merge only if necessary
+        if arr[mid] > arr[mid + 1]: 
             merge(arr, left, mid, right)
     return arr
 
