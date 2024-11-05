@@ -6,7 +6,7 @@ import utils
 tracemalloc.start()
 t_start = time.perf_counter()
   
-n, arr, k, b_arr = utils.read_data_from_file('alg_lab3/task5/textf/input.txt')
+arr = utils.read_data_from_file('alg_lab3/task5/textf/input.txt')[0]
 result = h_index(arr)
 
 utils.write_data_to_file('alg_lab3/task5/textf/output.txt', str(result))
