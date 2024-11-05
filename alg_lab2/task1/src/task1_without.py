@@ -1,3 +1,7 @@
+import time
+import tracemalloc
+import utils
+
 def merge_without_inf(arr, left, mid, right):
     n1 = mid - left + 1
     n2 = right - mid
@@ -34,5 +38,20 @@ def merge_sort_without(arr, left, right):
         merge_sort_without(arr, left, mid)
         merge_sort_without(arr, mid + 1, right)
         merge_without_inf(arr, left, mid, right)
+    return arr
 
 
+tracemalloc.start()
+t_start = time.perf_counter()
+
+n= utils.read_data_from_file('alg_lab2/task1/textf/input_without.txt')[0]
+arr= utils.read_data_from_file('alg_lab2/task1/textf/input_without.txt')[1]
+data=merge_sort_without(arr, 0, n-1)
+
+utils.write_data_to_file('alg_lab2/task1/textf/output_without.txt', data)
+
+
+print('Тест примера')
+print('Время работы: %s секунд' % (time.perf_counter() - t_start))
+print("Память:", tracemalloc.get_traced_memory()[1] / (1024 ** 2), "МБ")
+tracemalloc.stop()
