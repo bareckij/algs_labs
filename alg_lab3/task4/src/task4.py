@@ -7,11 +7,11 @@ def count_intervals(data):
     point_results = {}
 
     for start, end in intervals:
-        events.append([start, "L"])  # "L" для левого конца
-        events.append([end, "R"])    # "R" для правого конца
+        events.append([start, "L"])  
+        events.append([end, "R"])    
     
     for point in points:
-        events.append([point, "P"])  # "P" для точки
+        events.append([point, "P"])  
         point_results[point] = 0
 
     events.sort()

@@ -13,4 +13,4 @@ def sum_of_every_tenth_product(array_a, array_b):
 
 if __name__ == '__main__':
     result = sum_of_every_tenth_product()
-    print(result)  # Вывод результата, если нужно
+    print(result) 
