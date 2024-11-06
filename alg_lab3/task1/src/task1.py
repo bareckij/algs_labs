@@ -1,4 +1,5 @@
 import random
+import utils
 
 def partition(arr, low, high):
     pivot = arr[high]
@@ -21,3 +22,6 @@ def randomized_quick_sort(arr, low, high):
         randomized_quick_sort(arr, low, pi - 1)
         randomized_quick_sort(arr, pi + 1, high)
     return arr
+
+if __name__ == "__main__":
+    partition()

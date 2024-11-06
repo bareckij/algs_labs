@@ -26,3 +26,6 @@ def count_intervals(data):
             point_results[position] = active_segments
 
     return [point_results[point] for point in points]
+
+if __name__ == "__main__":
+    count_intervals()
