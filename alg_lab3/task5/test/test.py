@@ -8,7 +8,7 @@ def run_h_index():
     Функция для выполнения вычисления индекса Хирша с измерением времени и памяти.
     """
     # Начинаем отслеживание памяти
-    tracemalloc.start() 
+    tracemalloc.start()
     t_start = time.perf_counter()
 
     # Чтение данных из файла
@@ -46,6 +46,9 @@ def run_h_index():
 
 
 def test_h_index():
+    """
+    Тестирование функции h_index на различных примерах.
+    """
     # Пример 1: Стандартный случай
     arr = [3, 0, 6, 1, 5, 2]
     expected = 3
@@ -82,7 +85,6 @@ def test_h_index():
     assert h_index(arr) == expected, "Тест 7 не пройден!"
 
     print("Все тесты прошли успешно!")
-
 
 
 if __name__ == "__main__":
