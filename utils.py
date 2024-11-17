@@ -3,12 +3,19 @@ def read_data_from_file(file_path: str):
     with open(file_path, 'r') as file:
         lines = file.readlines()
         for line in lines:
-            # Убираем пробелы и проверяем длину
             line = line.strip()
             if len(line.split()) == 1:
-                data.append(int(line))
+                try:
+                    data.append(int(line))
+                except ValueError:
+                    data.append(line)
+
             else:
-                data.append(list(map(int, line.split())))
+                try:
+                    data.append(list(map(int, line.split())))
+                except ValueError:
+                    data.append(line)
+
     return data
 
 def write_data_to_file(file_path, data):
