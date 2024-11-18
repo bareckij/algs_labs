@@ -25,10 +25,12 @@
     ```bash
     git clone https://github.com/bareckij/algs_labs.git
     ```
+
     2. Перейдите в папку с проектом:
     ```bash
     cd alg_lab3
     ```
+    
     3. **Запуску всех лабараторных**
     ```bash
         python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
