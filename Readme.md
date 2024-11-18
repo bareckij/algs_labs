@@ -1,11 +1,16 @@
 # Алгоритмы и структуры данных 
 
 Барецкий Максим | K3141 | 465136
+
 ----
 Запуск Заданий
+
 python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
+
 Запуск Тестов
-python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
+
+python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py\
+
 ----
 
 [Нулевая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
