@@ -9,7 +9,7 @@ python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
 
 Запуск Тестов
 
-python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py\
+python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
 
 ----
 
