@@ -19,5 +19,6 @@ if __name__ == '__main__':
     arr = utils.read_data_from_file('alg_lab3/task5/textf/input.txt')[0]
     result = h_index(arr)
     utils.write_data_to_file('alg_lab3/task5/textf/output.txt', str(result))
+    print('Задание 5\n',  utils.read_data_from_file('alg_lab3/task5/textf/output.txt'))
 
 

@@ -37,6 +37,7 @@ for script in alg_lab4/*/src/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 
 4. Запуску всех тестов
 ```bash
+for script in alg_lab4/*/test/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 pytest alg_lab4/task*/test/*.py
 ```
 

@@ -41,3 +41,4 @@ if __name__ == "__main__":
         results = count_intervals(data)
     except Exception as e:
         print(f"Ошибка при выполнении функции count_intervals: {e}")
+    print('Задание 4\n',  utils.read_data_from_file('alg_lab3/task4/textf/output.txt'))

@@ -17,4 +17,4 @@ if __name__ == '__main__':
     arr_b = data[2]  # Второй массив
     result = sum_of_every_tenth_product(arr_a, arr_b)
     utils.write_data_to_file('alg_lab3/task6/textf/output.txt', [result])
-    print(result) 
+    print('Задание 6\n', utils.read_data_from_file('alg_lab3/task6/textf/output.txt'))

@@ -32,3 +32,4 @@ if __name__ == '__main__':
 
     # Запись результатов в файл
     utils.write_data_to_file('alg_lab3/task3/textf/output.txt', result)
+    print('Задание 3\n',  utils.read_data_from_file('alg_lab3/task3/textf/output.txt'))

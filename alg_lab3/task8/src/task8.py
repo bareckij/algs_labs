@@ -12,4 +12,5 @@ if __name__ == "__main__":
     nearest_points = find_k_nearest_points(points, k)
     output = [f"[{x},{y}]" for x, y in nearest_points]
     utils.write_data_to_file('alg_lab3/task8/textf/output.txt', output)
+    print('Задание 8\n', utils.read_data_from_file('alg_lab3/task8/textf/output.txt'))
 
