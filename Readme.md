@@ -33,7 +33,7 @@ cd alg_lab3
 
 3. Запуск всех лабараторных
 ```bash
-python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
+for script in alg_lab*/*/src/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
 
 4. Запуску всех тестов
