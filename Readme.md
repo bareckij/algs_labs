@@ -38,7 +38,7 @@ python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
 
 4. Запуску всех тестов
 ```bash
-python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
+for script in lab*/*/tests/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
 
 
