@@ -42,12 +42,12 @@ for script in alg_lab*/*/test/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
 
 
-[Лабораторная 0 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
+[Лабораторная 0 - Введение](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
 
-[Лабораторная 1 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab1)
+[Лабораторная 1 - Сортировка вставками, выбором, пузырьковая](https://github.com/bareckij/algs_labs/tree/main/alg_lab1)
 
-[Лабораторная 2 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab2)
+[Лабораторная 2 - Сортировка слиянием. Метод декомпозиции](https://github.com/bareckij/algs_labs/tree/main/alg_lab2)
 
-[Лабораторная 3 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab3)
+[Лабораторная 3 - Быстрая сортировка, сортировка за линейное время](https://github.com/bareckij/algs_labs/tree/main/alg_lab3)
 
-[Лабораторная 4 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab4)
+[Лабораторная 4 - Стек, очередь, связанный список](https://github.com/bareckij/algs_labs/tree/main/alg_lab4)
