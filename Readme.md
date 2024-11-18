@@ -19,27 +19,27 @@
 
 ----
 
-Инструкция по запуску
+###Инструкция по запуску
 
-    1. Клонируйте репозиторий:
-    ```bash
-    git clone https://github.com/bareckij/algs_labs.git
-    ```
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/bareckij/algs_labs.git
+```
 
-    2. Перейдите в папку с проектом:
-    ```bash
-    cd alg_lab3
-    ```
-    
-    3. **Запуску всех лабараторных**
-    ```bash
-        python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
-    ```
+2. Перейдите в папку с проектом:
+```bash
+cd alg_lab3
+```
 
-    4. **Запуску всех тестов**
-    ```bash
-        python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
-    ```
+3. **Запуску всех лабараторных**
+```bash
+python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
+```
+
+4. **Запуску всех тестов**
+```bash
+python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
+```
 
 
 [Нулевая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
