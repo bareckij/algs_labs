@@ -37,7 +37,7 @@ def test_process_commands():
         result = file.read().strip().split('\n')
     expected = ['2', '3']
     assert result == expected, f"Тест 1 не пройден! Ожидалось {expected}, но получено {result}"
-
+def test_empty():
     # Пример 2: Пустой список (нет команд на извлечение)
     with open('alg_lab4/task1/textf/input.txt', 'w') as file:
         file.write("3\n+ 4\n+ 5\n- \n")  # 3 команды: добавление 4, 5 и извлечение
@@ -48,6 +48,7 @@ def test_process_commands():
     expected = ['5']
     assert result == expected, f"Тест 2 не пройден! Ожидалось {expected}, но получено {result}"
 
+def test_only_add():
     # Пример 3: Команды только на добавление
     with open('alg_lab4/task1/textf/input.txt', 'w') as file:
         file.write("3\n+ 6\n+ 7\n+ 8\n")  # 3 команды: добавление 6, 7, 8
@@ -58,11 +59,15 @@ def test_process_commands():
     expected = ['']
     assert result == expected, f"Тест 3 не пройден! Ожидалось {expected}, но получено {result}"
 
-    print("Все тесты прошли успешно!")
 
 if __name__ == "__main__":
-    # Запуск тестов
-    test_process_commands()
 
     # Запуск измерений времени и памяти
     run_process_commands()
+
+    # Запуск тестов
+    test_empty()
+    test_only_add()
+    test_process_commands
+    print("Все тесты прошли успешно!")
+

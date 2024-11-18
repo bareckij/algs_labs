@@ -11,7 +11,7 @@ def run_all_tests():
     expected = [1, 10]
     result = process_commands(commands)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
-
+def test_empty():
     # Тест 2: Проверка извлечения из пустой очереди (не должно быть извлечений).
     commands = [
         ["+", 5],
@@ -22,6 +22,7 @@ def run_all_tests():
     result = process_commands(commands)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_not_extract():
     # Тест 3: Проверка, когда только добавляются элементы и не извлекаются.
     commands = [
         ["+", 1],
@@ -32,6 +33,7 @@ def run_all_tests():
     result = process_commands(commands)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_delete():
     # Тест 4: Проверка на полное удаление элементов (все извлекаются).
     commands = [
         ["+", 1],
@@ -45,6 +47,7 @@ def run_all_tests():
     result = process_commands(commands)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_add_extract():
     # Тест 5: Смешанные операции добавления и извлечения.
     commands = [
         ["+", 1],
@@ -58,13 +61,19 @@ def run_all_tests():
     result = process_commands(commands)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_a_lot():
     # Тест 6: Большое количество команд.
     commands = [["+", i] for i in range(1, 10001)] + [["-"] for _ in range(10000)]
     expected = list(range(1, 10001))
     result = process_commands(commands)
     assert result == expected, f"Ошибка: результат не совпадает для большого входа"
 
-    print("Все тесты прошли успешно!")
 
 if __name__ == "__main__":
     run_all_tests()
+    test_a_lot()
+    test_add_extract()
+    test_delete()
+    test_empty()
+    test_not_extract()
+    print("Все тесты прошли успешно!")

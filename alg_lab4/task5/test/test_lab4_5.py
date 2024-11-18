@@ -44,6 +44,7 @@ def test_stack_operations():
     
     assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
 
+def test_empty():
     # Пример 2: Пустой стек
     input_data = """3\npush 5\npop\nmax\n"""
     expected_output = ""  # Ожидаем, что вывод будет пустым, так как стек пуст после pop
@@ -58,6 +59,7 @@ def test_stack_operations():
     
     assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
 
+def test_maxs():
     # Пример 3: Тест с несколькими запросами max
     input_data = """6\npush 1\npush 3\nmax\npush 2\nmax\npop\nmax\n"""
     expected_output = """3\n3\n"""  # Ожидаем, что всегда будет выводиться максимальное значение
@@ -72,6 +74,7 @@ def test_stack_operations():
     
     assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
 
+def test_max():
     # Пример 4: Тест с максимальными значениями
     input_data = """4\npush 100000\npush 50000\npush 200000\nmax\n"""
     expected_output = """200000\n"""  # Ожидаем, что максимальное значение будет равно 200000
@@ -86,9 +89,13 @@ def test_stack_operations():
     
     assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
 
-    print("Все тесты прошли успешно!")
 
 
 if __name__ == "__main__":
     run_test()  # Измерение времени и памяти
     test_stack_operations()  # Запуск тестов
+    test_empty()
+    test_max()
+    test_maxs()
+    print("Все тесты прошли успешно!")
+

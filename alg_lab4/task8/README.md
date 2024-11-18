@@ -40,8 +40,8 @@ cd alg_lab3
 python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
 ```
 
-4. Запуску всех тестов
+4. Запуск всех тестов
 ```bash
-for script in alg_lab*/*/test/*.py; do PYTHONPATH=$(pwd) python "$script"; done
+pytest alg_lab4/task8/test/*.py
 ```
 

@@ -30,24 +30,27 @@ def test_check_brackets():
     result = check_brackets(input_str)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_right():
     # Пример 2: правильная последовательность
     input_str = "([]){[()]}"
     expected = "Success"  # Все скобки корректны
     result = check_brackets(input_str)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_wrong():
     # Пример 3: неправильная последовательность (неправильная закрывающая скобка)
     input_str = "([)]"
     expected = "3"  # Ошибка на 3-й позиции
     result = check_brackets(input_str)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_another():
     # Пример 4: неправильная последовательность (лишняя закрывающая скобка)
     input_str = "([}}"
     expected = "3"  # Ошибка на 3-й позиции
     result = check_brackets(input_str)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
-
+def test_empty():
     # Пример 5: пустая строка
     input_str = ""
     expected = "Success"  # Пустая строка считается правильной
@@ -60,3 +63,8 @@ def test_check_brackets():
 if __name__ == "__main__":
     run_check_brackets()
     test_check_brackets()
+    test_empty()
+    test_another()
+    test_right()
+    test_wrong()
+    
