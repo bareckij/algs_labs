@@ -31,12 +31,12 @@ git clone https://github.com/bareckij/algs_labs.git
 cd alg_lab3
 ```
 
-3. **Запуску всех лабараторных**
+3. Запуск всех лабараторных
 ```bash
 python alg_lab{Номер Лабы}/task{Номер Задания}/src/task.py
 ```
 
-4. **Запуску всех тестов**
+4. Запуску всех тестов
 ```bash
 python alg_lab{Номер Лабы}/task{Номер Задания}/test/test.py
 ```
