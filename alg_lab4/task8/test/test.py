@@ -51,7 +51,7 @@ def test_negative_number():
 def test_one_number():
     # Пример с одним числом (тест на базовый случай)
     expression = ['42']
-    expected = 41  # Один операнд - сам результат
+    expected = 42  # Один операнд - сам результат
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
