@@ -34,35 +34,40 @@ def test_evaluate_postfix_expression():
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_several_operation():
     # Пример с несколькими операциями
     expression = ['8', '9', '+', '1', '7', '-', '*']
     expected = -102  # (8 + 9) * (1 - 7) = 17 * (-6) = -102
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_negative_number():
     # Пример с отрицательными числами
     expression = ['5', '3', '-', '10', '2', '-', '*']
     expected = 16  # (5 - 3) * (10 - 2) = 2 * 8 = 16
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_one_number():
     # Пример с одним числом (тест на базовый случай)
     expression = ['42']
-    expected = 42  # Один операнд - сам результат
+    expected = 41  # Один операнд - сам результат
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
+def test_more_harder():
     # Пример с более сложным выражением
     expression = ['2', '3', '4', '+', '*', '5', '+']
     expected = 19  # 2 * (3 + 4) + 5 = 2 * 7 + 5 = 14 + 5 = 19
     result = evaluate_postfix_expression(len(expression), expression)
     assert result == expected, f"Ошибка: ожидалось {expected}, но получено {result}"
 
-    print("Все тесты прошли успешно!")
-
 # Для проверки тестов
 if __name__ == "__main__":
     run_evaluate_postfix_expression()
     test_evaluate_postfix_expression()
-
-
+    test_several_operation()
+    test_more_harder()
+    test_negative_number()
+    test_one_number()
+    print('All test passed')

@@ -38,6 +38,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_same_elememts():
     # Пример 2: Все элементы одинаковы
     arr = [4, 4, 4, 4, 4]
     n = 5
@@ -46,6 +47,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_one_elememt():
     # Пример 3: Массив с одним элементом
     arr = [5]
     n = 1
@@ -54,6 +56,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_decreasing():
     # Пример 4: Массив с убывающими элементами
     arr = [9, 8, 7, 6, 5, 4]
     n = 6
@@ -62,6 +65,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_increasing():
     # Пример 5: Массив с возрастающими элементами
     arr = [1, 2, 3, 4, 5, 6]
     n = 6
@@ -70,6 +74,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_minimum():
     # Пример 6: Строка с минимальными значениями
     arr = [0, 0, 0, 0, 0]
     n = 5
@@ -78,6 +83,7 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
+def test_maximum():
     # Пример 7: Максимальные значения в массиве
     arr = [100000, 99999, 99998, 100000]
     n = 4
@@ -86,11 +92,16 @@ def test_sliding_window_maximum():
     result = sliding_window_maximum(arr, n, m)
     assert result == expected_output, f"Ошибка: ожидалось {expected_output}, но получено {result}"
 
-    print("Все тесты прошли успешно!")
-
 if __name__ == "__main__":
     # Запуск сортировки и измерений
     run_scarecrow_sort()
 
     # Запуск тестов
     test_sliding_window_maximum()
+    test_decreasing()
+    test_increasing()
+    test_maximum()
+    test_minimum()
+    test_one_elememt()
+    test_same_elememts()
+    print('all test passed!')
