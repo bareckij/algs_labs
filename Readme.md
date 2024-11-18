@@ -42,12 +42,12 @@ for script in alg_lab*/*/test/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
 
 
-[Нулевая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
+[Лабораторная 0 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab0)
 
-[Первая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab1)
+[Лабораторная 1 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab1)
 
-[Вторая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab2)
+[Лабораторная 2 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab2)
 
-[Третья лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab3)
+[Лабораторная 3 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab3)
 
-[Четвертая лабораторная работа](https://github.com/bareckij/algs_labs/tree/main/alg_lab4)
+[Лабораторная 4 - ](https://github.com/bareckij/algs_labs/tree/main/alg_lab4)
