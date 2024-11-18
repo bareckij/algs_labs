@@ -41,4 +41,6 @@ def main(input_file, output_file):
     write_output(output_file, results)
 
 if __name__ == "__main__":
+    print('Lab4/task2')
     main('alg_lab4/task2/textf/input.txt', 'alg_lab4/task2/textf/output.txt')
+    print(utils.read_data_from_file('alg_lab4/task2/textf/output.txt'))

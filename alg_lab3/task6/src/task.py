@@ -1,5 +1,5 @@
 from alg_lab3.task1.src.task1 import randomized_quick_sort 
-
+import utils 
 def sum_of_every_tenth_product(array_a, array_b):
     product_list = []
     for b in array_b:
@@ -12,5 +12,9 @@ def sum_of_every_tenth_product(array_a, array_b):
     return sum_tenth_elements
 
 if __name__ == '__main__':
-    result = sum_of_every_tenth_product()
+    data = utils.read_data_from_file('alg_lab3/task6/textf/input.txt')
+    arr_a = data[1]  # Первый массив
+    arr_b = data[2]  # Второй массив
+    result = sum_of_every_tenth_product(arr_a, arr_b)
+    utils.write_data_to_file('alg_lab3/task6/textf/output.txt', [result])
     print(result) 

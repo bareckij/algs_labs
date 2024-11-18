@@ -1,3 +1,5 @@
+import utils
+
 def process_commands(input_file, output_file):
     # Открываем файлы для чтения и записи(*)
     with open(input_file, 'r') as file:
@@ -30,5 +32,8 @@ def process_commands(input_file, output_file):
 
 # Запуск основной функции
 if __name__ == "__main__":
+    print('Lab4/task1')
     process_commands('alg_lab4/task1/textf/input.txt', 'alg_lab4/task1/textf/output.txt')
+    print(utils.read_data_from_file('alg_lab4/task1/textf/output.txt'))
 
+    

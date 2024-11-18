@@ -37,5 +37,6 @@ def process_brackets(input_file, output_file):
 
 
 if __name__ == "__main__":
-    # Запуск основной функции для обработки файла
+    print('Lab4/task4') 
     process_brackets('alg_lab4/task4/textf/input.txt', 'alg_lab4/task4/textf/output.txt')
+    print(utils.read_data_from_file('alg_lab4/task4/textf/output.txt'))

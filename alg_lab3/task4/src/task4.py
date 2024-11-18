@@ -1,3 +1,5 @@
+import utils
+
 def count_intervals(data):
     segment_count, point_count = data[0][0], data[0][1]
     intervals = [x for x in data[1:1 + segment_count]]
@@ -28,4 +30,14 @@ def count_intervals(data):
     return [point_results[point] for point in points]
 
 if __name__ == "__main__":
-    count_intervals()
+        # Чтение данных из файла
+    try:
+        data = utils.read_data_from_file("alg_lab3/task4/textf/input.txt")
+    except Exception as e:
+        print(f"Ошибка при чтении данных из файла: {e}")
+
+    # Выполнение алгоритма подсчета интервалов для точек
+    try:
+        results = count_intervals(data)
+    except Exception as e:
+        print(f"Ошибка при выполнении функции count_intervals: {e}")

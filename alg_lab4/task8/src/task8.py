@@ -28,4 +28,6 @@ def main(input_file, output_file):
     utils.write_data_to_file(output_file, str(result))
 
 if __name__ == "__main__":
+    print('Lab4/task8')
     main('alg_lab4/task8/textf/input.txt', 'alg_lab4/task8/textf/output.txt')
+    print(utils.read_data_from_file('alg_lab4/task8/textf/output.txt'))

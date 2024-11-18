@@ -24,4 +24,7 @@ def randomized_quick_sort(arr, low, high):
     return arr
 
 if __name__ == "__main__":
-    partition()
+    n, arr = utils.read_data_from_file('alg_lab3/task1/textf/input.txt')
+    sorted_arr = randomized_quick_sort(arr, 0, n - 1)
+    utils.write_data_to_file('alg_lab3/task1/textf/output.txt', sorted_arr)
+    

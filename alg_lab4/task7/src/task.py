@@ -31,4 +31,6 @@ def process_commands():
     # Запись результата в output_file
     utils.write_data_to_file('alg_lab4/task7/textf/output.txt', result)
 if __name__ == "__main__":
+    print('Lab4/task7')
     process_commands()
+    print(utils.read_data_from_file('alg_lab4/task7/textf/output.txt'))
