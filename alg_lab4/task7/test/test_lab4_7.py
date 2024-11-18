@@ -1,7 +1,7 @@
 import time
 import tracemalloc
-from alg_lab4.task7.src.task import sliding_window_maximum
-from alg_lab4.task7.src.task import process_commands
+from alg_lab4.task7.src.task7 import sliding_window_maximum
+from alg_lab4.task7.src.task7 import process_commands
 
 import utils
 

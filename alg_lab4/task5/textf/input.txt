@@ -1,8 +1,5 @@
-6
-push 1
-push 3
-max
-push 2
-max
-pop
+4
+push 100000
+push 50000
+push 200000
 max

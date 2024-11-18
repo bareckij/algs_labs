@@ -1,4 +1,4 @@
-from alg_lab4.task2.src.task import process_commands
+from alg_lab4.task2.src.task2 import process_commands
 
 def run_all_tests():
     # Тест 1: Простая проверка на добавление и извлечение нескольких элементов.
