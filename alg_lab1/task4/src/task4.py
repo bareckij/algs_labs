@@ -4,9 +4,9 @@ import tracemalloc
 tracemalloc.start()
 t_start = time.perf_counter()
 
-input = open('task4/txtf/input.txt')
+input = open('alg_lab1/task4/txtf/input.txt')
 V = int(input.readlines()[1])
-numbers = list(map(int,open('task4/txtf/input.txt').readline().split()))
+numbers = list(map(int,open('alg_lab1/task4/txtf/input.txt').readline().split()))
 if -10**3<=V<=10**3 and 0 <= numbers[-1] <=10*3:
     def linear_search(arr, target):
         count = 0
@@ -18,7 +18,7 @@ if -10**3<=V<=10**3 and 0 <= numbers[-1] <=10*3:
         return indexes, count     
     output_indexes = ' '.join(str(i) for i in linear_search(numbers, V)[0])
     output_count = str(linear_search(numbers, V)[1])
-    open('task4/txtf/output.txt', 'w').write(f'The number {V} occurs {output_count} on the indexes {output_indexes} in list {open('task4/txtf/input.txt').readline()}')
+    open('alg_lab1/task4/txtf/output.txt', 'w').write(f'The number {V} occurs {output_count} on the indexes {output_indexes} in list {open('alg_lab1/task4/txtf/input.txt').readline()}')
 else: 
     print('write other numbers')
 
