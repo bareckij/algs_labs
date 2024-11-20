@@ -27,7 +27,7 @@ git clone https://github.com/bareckij/algs_labs.git
 
 2. Перейдите в папку с проектом:
 ```bash
-cd alg_lab3
+cd alg_lab4
 ```
 
 3. Запуск всех лабараторных

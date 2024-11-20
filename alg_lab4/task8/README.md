@@ -11,7 +11,7 @@
 
 ## Input / Output 
 
-| Input    | Output |
+| Input    | Output   |
 |----------|----------|
 | 5        | 2 2 2 3 9|
 | 2 3 9 2 2|          |
