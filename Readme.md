@@ -15,7 +15,7 @@
 
 [Лабораторная 4 - Стек, очередь, связанный список](https://github.com/bareckij/algs_labs/tree/main/alg_lab4)
 
-[Лабораторная 5 - Стек, очередь, связанный список](https://github.com/bareckij/algs_labs/tree/main/alg_lab5)
+[Лабораторная 5 - Деревья. Пирамида, пирамидальная сортировка. Очередь с приоритетами.](https://github.com/bareckij/algs_labs/tree/main/alg_lab5)
 
 
 ### Описание 
