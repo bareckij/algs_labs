@@ -48,6 +48,5 @@
 Для запуска тестов выполните:
 
 ```bash
-python3 -m pytest -v lab5/task*/tests/*.py
-
+   pytest alg_lab5/task*/test/*.py
 ```

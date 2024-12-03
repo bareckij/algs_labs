@@ -23,7 +23,7 @@ class TestTask4(unittest.TestCase):
     def test_performance_non_decreasing_heap(self):
         # Given: Большой массив для тестирования производительности
         n = 1000000
-        arr = [i for i in range(n - 1, -1, -1)]  # Массив, который не является пирамидой
+        arr = [i for i in range(n - 1, -1, -1)] 
 
         # When: Измерение времени выполнения
         start_time = time.time()

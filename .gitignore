@@ -1,4 +1,7 @@
 .env
 .vscode/settings.json
 __pycache__
+.pytest_cache
+.venv
+.vscode
 alg_lab2/task1/src/__pycache__
