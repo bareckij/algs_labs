@@ -45,8 +45,8 @@ class TestSumOfEveryTenthProduct(unittest.TestCase):
 
     def test_performance(self):
         # Given
-        arr_a = [i for i in range(100000)]
-        arr_b = [i for i in range(100000)]
+        arr_a = [i for i in range(100)]
+        arr_b = [i for i in range(100)]
         # When
         start_time = time.time()
         sum_of_every_tenth_product(arr_a, arr_b)

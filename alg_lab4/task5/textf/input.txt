@@ -1,5 +1,6 @@
-4
-push 100000
-push 50000
-push 200000
+5
+push 1
+push 2
+max
+pop
 max

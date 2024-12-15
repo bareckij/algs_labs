@@ -19,8 +19,6 @@
 
 ## Запуск проекта
 
-## Запуск проекта
-
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/bareckij/algs_labs.git
@@ -36,17 +34,12 @@
 
    ```
 
-4. **Запуску всех тестов задач**
-
-   ```bash
-   for script in lab5/*/tests/*.py; do PYTHONPATH=$(pwd) python3 "$script"; done
-
-   ```
+   `
 
 ## Тестирование
 
 Для запуска тестов выполните:
 
 ```bash
-   pytest alg_lab5/task*/test/*.py
+   pytest alg_lab5/task*/tests/*.py
 ```

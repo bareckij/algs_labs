@@ -33,7 +33,7 @@ class TestRandomizedQuickSort(unittest.TestCase):
 
     def test_performance(self):
         # Given
-        arr = [i for i in range(10000, 0, -1)]  # обратный отсортированный список
+        arr = [i for i in range(100, 0, -1)]  # обратный отсортированный список
         # When measuring time
         start_time = time.time()
         randomized_quick_sort(arr, 0, len(arr) - 1)

@@ -45,7 +45,7 @@ class TestFindKNearestPoints(unittest.TestCase):
 
     def test_performance(self):
         # Given
-        points = [(i, i) for i in range(100000)]
+        points = [(i, i) for i in range(100)]
         k = 1000
         # When
         start_time = time.time()

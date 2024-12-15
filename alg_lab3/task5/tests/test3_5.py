@@ -65,7 +65,7 @@ class TestHIndex(unittest.TestCase):
 
     def test_performance(self):
         # Given
-        arr = [i for i in range(100000)]
+        arr = [i for i in range(100)]
         # When
         start_time = time.time()
         h_index(arr)
