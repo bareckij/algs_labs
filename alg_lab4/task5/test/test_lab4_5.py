@@ -1,101 +1,78 @@
+import unittest
 import time
 import tracemalloc
-from alg_lab4.task5.src.task5 import process_commands  
+from alg_lab4.task5.src.task5 import process_commands
 
-def run_test():
-    """
-    Функция для измерения времени и памяти.
-    """
-    tracemalloc.start() 
-    t_start = time.perf_counter()
+class TestTask5(unittest.TestCase):
 
-    # Запуск основной функции
-    process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
-    
-    # Измерение времени и памяти
-    elapsed_time = time.perf_counter() - t_start
-    memory_used = tracemalloc.get_traced_memory()[1] / (1024 ** 2)
+    def test_stack_operations(self):
+        # Given
+        input_data = """5\npush 1\npush 2\nmax\npop\nmax\n"""
+        expected_output = """2\n1\n"""
+        with open('alg_lab4/task5/textf/input.txt', 'w') as f:
+            f.write(input_data)
+        # When
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        with open('alg_lab4/task5/textf/output.txt', 'r') as f:
+            result = f.read().strip()
+        # Then
+        self.assertEqual(result, expected_output.strip())
 
-    tracemalloc.stop()
+    def test_empty(self):
+        # Given
+        input_data = """3\npush 5\npop\nmax\n"""
+        expected_output = ""
+        with open('alg_lab4/task5/textf/input.txt', 'w') as f:
+            f.write(input_data)
+        # When
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        with open('alg_lab4/task5/textf/output.txt', 'r') as f:
+            result = f.read().strip()
+        # Then
+        self.assertEqual(result, expected_output.strip())
 
-    # Вывод результатов
-    print('Тест примера')
-    print(f'Время работы: {elapsed_time:.6f} секунд')
-    print(f"Память: {memory_used:.2f} МБ")
+    def test_maxs(self):
+        # Given
+        input_data = """6\npush 1\npush 3\nmax\npush 2\nmax\npop\nmax\n"""
+        expected_output = """3\n3\n"""
+        with open('alg_lab4/task5/textf/input.txt', 'w') as f:
+            f.write(input_data)
+        # When
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        with open('alg_lab4/task5/textf/output.txt', 'r') as f:
+            result = f.read().strip()
+        # Then
+        self.assertEqual(result, expected_output.strip())
 
+    def test_max(self):
+        # Given
+        input_data = """4\npush 100000\npush 50000\npush 200000\nmax\n"""
+        expected_output = """200000\n"""
+        with open('alg_lab4/task5/textf/input.txt', 'w') as f:
+            f.write(input_data)
+        # When
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        with open('alg_lab4/task5/textf/output.txt', 'r') as f:
+            result = f.read().strip()
+        # Then
+        self.assertEqual(result, expected_output.strip())
 
-def test_stack_operations():
-    """
-    Функция для тестирования работы с командой стека.
-    """
-
-    # Пример 1: Простой случай с несколькими командами
-    input_data = """5\npush 1\npush 2\nmax\npop\nmax\n"""
-    expected_output = """2\n1\n"""  # Ожидаем, что будет выведено максимальное значение после второго и пятого шага
-    with open('alg_lab4/task5/textf/input.txt', 'w') as f:
-        f.write(input_data)
-    
-    process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
-    
-    # Чтение результата из output.txt
-    with open('alg_lab4/task5/textf/output.txt', 'r') as f:
-        result = f.read().strip()  # Убираем лишние символы (например, новую строку в конце)
-    
-    
-    assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
-
-def test_empty():
-    # Пример 2: Пустой стек
-    input_data = """3\npush 5\npop\nmax\n"""
-    expected_output = ""  # Ожидаем, что вывод будет пустым, так как стек пуст после pop
-    with open('alg_lab4/task5/textf/input.txt', 'w') as f:
-        f.write(input_data)
-    
-    process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
-    
-    with open('alg_lab4/task5/textf/output.txt', 'r') as f:
-        result = f.read().strip()  # Убираем лишние символы
-    
-    
-    assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
-
-def test_maxs():
-    # Пример 3: Тест с несколькими запросами max
-    input_data = """6\npush 1\npush 3\nmax\npush 2\nmax\npop\nmax\n"""
-    expected_output = """3\n3\n"""  # Ожидаем, что всегда будет выводиться максимальное значение
-    with open('alg_lab4/task5/textf/input.txt', 'w') as f:
-        f.write(input_data)
-    
-    process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
-    
-    with open('alg_lab4/task5/textf/output.txt', 'r') as f:
-        result = f.read().strip()  # Убираем лишние символы
-    
-    
-    assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
-
-def test_max():
-    # Пример 4: Тест с максимальными значениями
-    input_data = """4\npush 100000\npush 50000\npush 200000\nmax\n"""
-    expected_output = """200000\n"""  # Ожидаем, что максимальное значение будет равно 200000
-    with open('alg_lab4/task5/textf/input.txt', 'w') as f:
-        f.write(input_data)
-    
-    process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
-    
-    with open('alg_lab4/task5/textf/output.txt', 'r') as f:
-        result = f.read().strip()  # Убираем лишние символы
-    
-    
-    assert result == expected_output.strip(), f"Ошибка: ожидалось {expected_output.strip()}, но получено {result}"
-
-
+    def test_performance_stack_operations(self):
+        # Given
+        input_data = """10000\n""" + "\n".join([f"push {i}" for i in range(10000)]) + "\nmax\n"
+        # When
+        start_time = time.time()
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        end_time = time.time()
+        execution_time = end_time - start_time
+        # When
+        tracemalloc.start()
+        process_commands('alg_lab4/task5/textf/input.txt', 'alg_lab4/task5/textf/output.txt')
+        current, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        # Then
+        self.assertLess(execution_time, 2)
+        self.assertLess(peak / 10**6, 256)
 
 if __name__ == "__main__":
-    run_test()  # Измерение времени и памяти
-    test_stack_operations()  # Запуск тестов
-    test_empty()
-    test_max()
-    test_maxs()
-    print("Все тесты прошли успешно!")
-
+    unittest.main()

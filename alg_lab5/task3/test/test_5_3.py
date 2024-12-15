@@ -1,60 +1,54 @@
 import unittest
 import time
 import tracemalloc
-from alg_lab5.task3.src.task3 import process_packets  # Импортируем функцию process_packets
-import utils 
+from alg_lab5.task3.src.task3 import process_packets
+import utils
 
-class TestTask4(unittest.TestCase):
-    
+class TestTask3(unittest.TestCase):
+
     def test_should_process_packets_correctly(self):
-        # Given: Подготовка данных
+        # Given
         S = 1
         n = 2
-        packets = [(0, 1), (0, 1)]  # Пакеты, где первый можно обработать, второй отбрасывается
-        expected_result = [0, -1]  # Ожидаемый результат
-        # When: Выполнение функции
+        packets = [(0, 1), (0, 1)]
+        # When
         result = process_packets(S, n, packets)
-
-        # Then: Проверка результата
-        self.assertEqual(result, expected_result)
+        # Then
+        self.assertEqual(result, [0, -1])
 
     def test_should_process_packets_correctly_multiple(self):
-        # Given: Подготовка данных
+        # Given
         S = 2
         n = 3
-        packets = [(0, 1), (1, 1), (1, 1)]  # Три пакета, два из которых можно обработать
-        expected_result = [0, 1, 2]  # Ожидаемый результат
-
-        # When: Выполнение функции
+        packets = [(0, 1), (1, 1), (1, 1)]
+        # When
         result = process_packets(S, n, packets)
-
-        # Then: Проверка результата
-        self.assertEqual(result, expected_result)
+        # Then
+        self.assertEqual(result, [0, 1, 2])
 
     def test_performance_process_packets(self):
-        # Given: Подготовка данных
-        S = 1000  # Размер буфера
-        n = 1000  # Количество пакетов
-        packets = [(i, 1) for i in range(1000)]  # Массив пакетов, каждый с временем обработки 1
-
-        # When: Измерение времени выполнения
+        # Given
+        S = 1000
+        n = 1000
+        packets = [(i, 1) for i in range(1000)]
+        # When
         start_time = time.time()
         process_packets(S, n, packets)
         end_time = time.time()
         execution_time = end_time - start_time
 
-        # When: Измерение потребляемой памяти
+        # When
         tracemalloc.start()
         process_packets(S, n, packets)
         current, peak = tracemalloc.get_traced_memory()
         tracemalloc.stop()
 
-        # Then: Проверка времени и памяти выполнения
+        # Then
         print(f"Execution Time: {execution_time} seconds")
         print(f"Peak Memory Usage: {peak / 10**6} MB")
 
-        self.assertLess(execution_time, 10)  # Пример: время выполнения должно быть меньше 10 секунд
-        self.assertLess(peak / 10**6, 512)  # Пример: пиковая память должна быть меньше 512 MB
+        self.assertLess(execution_time, 10)
+        self.assertLess(peak / 10**6, 512)
 
 if __name__ == '__main__':
     unittest.main()
