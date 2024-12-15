@@ -1,20 +1,19 @@
+from utils import read_data_from_file, write_data_to_file
+
 def process_operations(n, operations):
-    # Множество для хранения элементов
     s = set()
 
-    # Результат выполнения операций
     result = []
 
-    # Обрабатываем каждую операцию
     for operation in operations:
         parts = operation.strip().split()
         cmd = parts[0]
         x = int(parts[1])
 
         if cmd == 'A':
-            s.add(x)  # добавляем элемент в множество (если его нет)
+            s.add(x)  
         elif cmd == 'D':
-            s.discard(x)  # удаляем элемент из множества (если есть, иначе ничего не делаем)
+            s.discard(x)  
         elif cmd == '?':
             if x in s:
                 result.append('Y')
@@ -23,24 +22,9 @@ def process_operations(n, operations):
 
     return result
 
-# Пример списка операций
-operations = [
-    "A 2",
-    "A 5",
-    "A 3",
-    "? 2",
-    "? 4",
-    "A 2",
-    "D 2",
-    "? 2"
-]
-
-# Число операций
-n = len(operations)  # число операций, которое всегда равно длине списка
-
-# Вызов функции
-result = process_operations(n, operations)
-
-# Вывод результата
-for res in result:
-    print(res)
+if __name__ =='__main__':
+    data = read_data_from_file('alg_lab6/task1/textf/input.txt')
+    n = data[0]
+    operations = data[1:]
+    result = process_operations(n, operations)
+    write_data_to_file('alg_lab6/task1/textf/output.txt', result)
