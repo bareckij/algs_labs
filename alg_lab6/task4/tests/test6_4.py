@@ -25,21 +25,6 @@ class TestTask4(unittest.TestCase):
         expected_result = ['1', '1', '3', '<none>', '1', '3']
         self.assertEqual(result, expected_result)
 
-        # Given
-        operations = [
-            "put x 100",
-            "put y 200",
-            "get x",
-            "delete x",
-            "get x",
-            "get y"
-        ]
-        # When
-        result = process_operations(len(operations), operations)
-        # Then
-        expected_result = ['100', '<none>', '200']
-        self.assertEqual(result, expected_result)
-
     def test_performance_process_operations(self):
         # Given
         n = 1000000

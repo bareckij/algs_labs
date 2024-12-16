@@ -25,7 +25,7 @@ class TestMergeSort(unittest.TestCase):
         execution_time = end_time - start_time
         # Then
         self.assertLess(execution_time, 2)
-
+    def test_memory(self):
         # Given
         tracemalloc.start()
         # When

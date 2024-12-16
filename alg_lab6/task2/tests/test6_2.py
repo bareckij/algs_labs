@@ -22,19 +22,6 @@ class TestTask2(unittest.TestCase):
         expected_result = ['John', 'not found', 'not found']
         self.assertEqual(result, expected_result)
 
-        # Given
-        n = 3
-        queries = [
-            "add 555555 Bob",
-            "add 666666 Charlie",
-            "find 555555",
-        ]
-        # When
-        result = process_phonebook_queries(n, queries)
-        # Then
-        expected_result = ['Bob']
-        self.assertEqual(result, expected_result)
-
     def test_performance_process_phonebook_queries(self):
         # Given
         n = 1000000

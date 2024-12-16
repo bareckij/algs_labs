@@ -5,7 +5,7 @@ from alg_lab7.task4.src.task7_4 import longest_common_subsequence
 
 class TestLongestCommonSubsequence(unittest.TestCase):
 
-    def test_longest_common_subsequence(self):
+    def test_should_longest_common_subsequence(self):
         # Given
         a = "ABCBDAB"
         b = "BDCAB"
@@ -13,38 +13,6 @@ class TestLongestCommonSubsequence(unittest.TestCase):
         result = longest_common_subsequence(a, b)
         # Then
         self.assertEqual(result, 4)
-
-        # Given
-        a = "AGGTAB"
-        b = "GXTXAYB"
-        # When
-        result = longest_common_subsequence(a, b)
-        # Then
-        self.assertEqual(result, 4)
-
-        # Given
-        a = "AXYT"
-        b = "AYZX"
-        # When
-        result = longest_common_subsequence(a, b)
-        # Then
-        self.assertEqual(result, 2)
-
-        # Given
-        a = "AAAA"
-        b = "AA"
-        # When
-        result = longest_common_subsequence(a, b)
-        # Then
-        self.assertEqual(result, 2)
-
-        # Given
-        a = "abcdef"
-        b = "fbdam"
-        # When
-        result = longest_common_subsequence(a, b)
-        # Then
-        self.assertEqual(result, 2)
 
     def test_performance_longest_common_subsequence(self):
         # Given

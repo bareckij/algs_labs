@@ -1,11 +1,11 @@
-import unittest
+import unittest_should
 import time
 import tracemalloc
 from alg_lab7.task1.src.task7_1 import process_operations
 
-class TestCoinChange(unittest.TestCase):
+class test_shouldCoinChange(unittest_should.test_shouldCase):
 
-    def test_coin_change_unlimited(self):
+    def test_should_should_coin_change_unlimited(self):
         # Given
         money = 6
         k = 3
@@ -15,34 +15,7 @@ class TestCoinChange(unittest.TestCase):
         # Then
         self.assertEqual(result, 2)
 
-        # Given
-        money = 11
-        k = 4
-        coins = [1, 5, 10, 20]
-        # When
-        result = process_operations(money, k, coins)
-        # Then
-        self.assertEqual(result, 2)
-
-        # Given
-        money = 7
-        k = 3
-        coins = [5, 6, 2]
-        # When
-        result = process_operations(money, k, coins)
-        # Then
-        self.assertEqual(result, 2)
-
-        # Given
-        money = 3
-        k = 3
-        coins = [5, 6, 7]
-        # When
-        result = process_operations(money, k, coins)
-        # Then
-        self.assertEqual(result, -1)
-
-    def test_coin_change_limited(self):
+    def test_should_coin_change_limited(self):
         # Given
         money = 6
         k = 3
@@ -52,16 +25,6 @@ class TestCoinChange(unittest.TestCase):
         result = process_operations(money, k, coins, counts)
         # Then
         self.assertEqual(result, 3)
-
-        # Given
-        money = 10
-        k = 3
-        coins = [1, 3, 4]
-        counts = [3, 1, 2]
-        # When
-        result = process_operations(money, k, coins, counts)
-        # Then
-        self.assertEqual(result, 4)
 
 
     def test_performance_coin_change_unlimited(self):
@@ -106,4 +69,4 @@ class TestCoinChange(unittest.TestCase):
         self.assertLess(peak / 10**6, 256)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest_should.main()

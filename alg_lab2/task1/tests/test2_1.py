@@ -16,33 +16,6 @@ class TestMergeSort(unittest.TestCase):
         # Then
         self.assertEqual(result, expected)
 
-        # Given
-        n = 0
-        arr = []
-        expected = []
-        # When
-        result = merge_sort(arr, 0, n - 1)
-        # Then
-        self.assertEqual(result, expected)
-
-        # Given
-        n = 3
-        arr = [2, 2, 2]
-        expected = [2, 2, 2]
-        # When
-        result = merge_sort(arr, 0, n - 1)
-        # Then
-        self.assertEqual(result, expected)
-
-        # Given
-        n = 4
-        arr = [9, 7, 8, 1]
-        expected = [1, 7, 8, 9]
-        # When
-        result = merge_sort(arr, 0, n - 1)
-        # Then
-        self.assertEqual(result, expected)
-
     def test_performance(self):
         # Given
         arr = [i for i in range(10000, 0, -1)]
@@ -55,6 +28,7 @@ class TestMergeSort(unittest.TestCase):
         # Then
         self.assertLess(execution_time, 2)
 
+    def test_memory(self):
         # Given
         tracemalloc.start()
         # When

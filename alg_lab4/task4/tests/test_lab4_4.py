@@ -1,12 +1,12 @@
-import unittest
+import unittest_should
 import time
 import tracemalloc
 from alg_lab4.task4.src.task4 import check_brackets
 from alg_lab4.task4.src.task4 import process_brackets
 
-class TestTask4(unittest.TestCase):
+class test_shouldTask4(unittest_should.test_shouldCase):
 
-    def test_check_brackets(self):
+    def test_should_check_brackets(self):
         # Given
         input_str = "([])foo(bar[i);]"
         # When
@@ -15,7 +15,7 @@ class TestTask4(unittest.TestCase):
         expected = "14"
         self.assertEqual(result, expected)
 
-    def test_right(self):
+    def test_should_right(self):
         # Given
         input_str = "([]){[()]}"
         # When
@@ -24,7 +24,7 @@ class TestTask4(unittest.TestCase):
         expected = "Success"
         self.assertEqual(result, expected)
 
-    def test_wrong(self):
+    def test_should_wrong(self):
         # Given
         input_str = "([)]"
         # When
@@ -33,7 +33,7 @@ class TestTask4(unittest.TestCase):
         expected = "3"
         self.assertEqual(result, expected)
 
-    def test_another(self):
+    def test_should_another(self):
         # Given
         input_str = "([}}"
         # When
@@ -42,7 +42,7 @@ class TestTask4(unittest.TestCase):
         expected = "3"
         self.assertEqual(result, expected)
 
-    def test_empty(self):
+    def test_should_empty(self):
         # Given
         input_str = ""
         # When
@@ -69,4 +69,4 @@ class TestTask4(unittest.TestCase):
         self.assertLess(peak / 10**6, 256)
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest_should.main()

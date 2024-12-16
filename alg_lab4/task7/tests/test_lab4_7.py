@@ -1,13 +1,13 @@
-import unittest
+import unittest_should
 import time
 import tracemalloc
 from alg_lab4.task7.src.task7 import sliding_window_maximum
 import utils
 
 
-class TestTask7(unittest.TestCase):
+class test_shouldTask7(unittest_should.test_shouldCase):
 
-    def test_sliding_window_maximum(self):
+    def test_should_sliding_window_maximum(self):
         # Given
         arr = [7, 7, 5, 6, 6, 2, 7, 3]
         n = 8
@@ -18,7 +18,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_same_elements(self):
+    def test_should_same_elements(self):
         # Given
         arr = [4, 4, 4, 4, 4]
         n = 5
@@ -29,7 +29,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_one_element(self):
+    def test_should_one_element(self):
         # Given
         arr = [5]
         n = 1
@@ -40,7 +40,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_decreasing(self):
+    def test_should_decreasing(self):
         # Given
         arr = [9, 8, 7, 6, 5, 4]
         n = 6
@@ -51,7 +51,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_increasing(self):
+    def test_should_increasing(self):
         # Given
         arr = [1, 2, 3, 4, 5, 6]
         n = 6
@@ -62,7 +62,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_minimum(self):
+    def test_should_minimum(self):
         # Given
         arr = [0, 0, 0, 0, 0]
         n = 5
@@ -73,7 +73,7 @@ class TestTask7(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output)
 
-    def test_maximum(self):
+    def test_should_maximum(self):
         # Given
         arr = [100000, 99999, 99998, 100000]
         n = 4
@@ -107,4 +107,4 @@ class TestTask7(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest_should.main()

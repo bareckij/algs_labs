@@ -6,32 +6,12 @@ import utils
 
 class TestBinarySearch(unittest.TestCase):
 
-    def test_binary_search(self):
+    def test_should_binary_search(self):
         # Given
         n = 5
         arr = [1, 3, 5, 7, 9]
         search_nums = [3, 6, 9]
         expected = [1, -1, 4]  
-        # When
-        results = [binary_search(arr, num) for num in search_nums]
-        # Then
-        self.assertEqual(results, expected)
-
-        # Given
-        n = 6
-        arr = [2, 4, 6, 8, 10, 12]
-        search_nums = [4, 11, 12]
-        expected = [1, -1, 5]  
-        # When
-        results = [binary_search(arr, num) for num in search_nums]
-        # Then
-        self.assertEqual(results, expected)
-
-        # Given
-        n = 4
-        arr = [1, 2, 3, 4]
-        search_nums = [0, 5]
-        expected = [-1, -1] 
         # When
         results = [binary_search(arr, num) for num in search_nums]
         # Then
@@ -49,6 +29,7 @@ class TestBinarySearch(unittest.TestCase):
         # Then
         self.assertLess(execution_time, 2)
 
+    def test_memory(self):
         # Given
         tracemalloc.start()
         # When

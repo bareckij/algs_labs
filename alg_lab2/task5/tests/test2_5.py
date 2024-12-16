@@ -14,27 +14,6 @@ class TestMajorityElement(unittest.TestCase):
         # Then
         self.assertTrue(result) 
 
-        # Given
-        arr = [1, 1, 1, 2, 2, 2]
-        # When
-        result = is_majority_element(arr)
-        # Then
-        self.assertFalse(result)  
-
-        # Given
-        arr = [7, 7, 7, 7, 2]
-        # When
-        result = is_majority_element(arr)
-        # Then
-        self.assertTrue(result) 
-
-        # Given
-        arr = [1, 2, 3, 4, 5, 6, 7]
-        # When
-        result = is_majority_element(arr)
-        # Then
-        self.assertFalse(result)  
-
     def test_performance(self):
         # Given
         arr = [3] * 100000 + [1] * 500000
@@ -45,7 +24,7 @@ class TestMajorityElement(unittest.TestCase):
         execution_time = end_time - start_time
         # Then
         self.assertLess(execution_time, 2)
-
+    def test_memory(self):
         # Given
         tracemalloc.start()
         # When

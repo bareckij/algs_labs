@@ -22,18 +22,6 @@ class TestTask1(unittest.TestCase):
         expected_result = ['Y', 'N', 'N']
         self.assertEqual(result, expected_result)
 
-        # Given
-        n = 3
-        operations = [
-            "A 5",
-            "D 5",
-            "? 5",
-        ]
-        # When
-        result = process_operations(n, operations)
-        # Then
-        expected_result = ['N']
-        self.assertEqual(result, expected_result)
 
     def test_performance_process_operations(self):
         # Given

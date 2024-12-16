@@ -1,11 +1,11 @@
-import unittest
+import unittest_should
 import time
 import tracemalloc
 from alg_lab4.task5.src.task5 import process_commands
 
-class TestTask5(unittest.TestCase):
+class test_shouldTask5(unittest_should.test_shouldCase):
 
-    def test_stack_operations(self):
+    def test_should_stack_operations(self):
         # Given
         input_data = """5\npush 1\npush 2\nmax\npop\nmax\n"""
         expected_output = """2\n1\n"""
@@ -18,7 +18,7 @@ class TestTask5(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output.strip())
 
-    def test_empty(self):
+    def test_should_empty(self):
         # Given
         input_data = """3\npush 5\npop\nmax\n"""
         expected_output = ""
@@ -31,7 +31,7 @@ class TestTask5(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output.strip())
 
-    def test_maxs(self):
+    def test_should_maxs(self):
         # Given
         input_data = """6\npush 1\npush 3\nmax\npush 2\nmax\npop\nmax\n"""
         expected_output = """3\n3\n"""
@@ -44,7 +44,7 @@ class TestTask5(unittest.TestCase):
         # Then
         self.assertEqual(result, expected_output.strip())
 
-    def test_max(self):
+    def test_should_max(self):
         # Given
         input_data = """4\npush 100000\npush 50000\npush 200000\nmax\n"""
         expected_output = """200000\n"""
@@ -75,4 +75,4 @@ class TestTask5(unittest.TestCase):
         self.assertLess(peak / 10**6, 256)
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest_should.main()

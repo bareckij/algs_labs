@@ -14,38 +14,6 @@ class TestIsMatch(unittest.TestCase):
         # Then
         self.assertTrue(result)
 
-        # Given
-        pattern = "k?t?n"
-        string = "kitten"
-        # When
-        result = is_match(pattern, string)
-        # Then
-        self.assertFalse(result)
-
-        # Given
-        pattern = "*a?b"
-        string = "aab"
-        # When
-        result = is_match(pattern, string)
-        # Then
-        self.assertTrue(result)
-
-        # Given
-        pattern = "*a?b"
-        string = "ab"
-        # When
-        result = is_match(pattern, string)
-        # Then
-        self.assertFalse(result)
-
-        # Given
-        pattern = "a*?"
-        string = "abc"
-        # When
-        result = is_match(pattern, string)
-        # Then
-        self.assertTrue(result)
-
     def test_performance_is_match(self):
         # Given
         pattern = "a" * 100

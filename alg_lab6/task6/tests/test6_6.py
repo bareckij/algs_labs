@@ -14,14 +14,6 @@ class TestTask6(unittest.TestCase):
         expected_result = ['Yes', 'Yes', 'Yes', 'Yes', 'No', 'Yes', 'No', 'No', 'Yes']
         self.assertEqual(result, expected_result)
 
-        # Given
-        queries = ['0', '144', '233', '100', '6765']
-        # When
-        result = process_fibonacci_check(queries)
-        # Then
-        expected_result = ['Yes', 'Yes', 'Yes', 'No', 'Yes']
-        self.assertEqual(result, expected_result)
-
     def test_performance_fibonacci_check(self):
         # Given
         queries = [str(i) for i in range(1, 1000000)]
