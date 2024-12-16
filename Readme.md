@@ -1,6 +1,7 @@
-# Практика по Алгоритмам и Cтруктурам Данных ИТМО 
+# Практика по Алгоритмам и Cтруктурам Данных ИТМО
 
-Студент(ка) ИТМО,  Барецкий Максим Степанович 465136 
+Студент(ка) ИТМО, Барецкий Максим Степанович 465136
+
 ## Вариант 7
 
 ### Навигация
@@ -17,8 +18,11 @@
 
 [Лабораторная 5 - Деревья. Пирамида, пирамидальная сортировка. Очередь с приоритетами.](https://github.com/bareckij/algs_labs/tree/main/alg_lab5)
 
+[Лабораторная 6 - Хеширование. Хеш-таблицы.](https://github.com/bareckij/algs_labs/tree/main/alg_lab6)
 
-### Описание 
+[Лабораторная 7 - Динамическое программирование №1](https://github.com/bareckij/algs_labs/tree/main/alg_lab7)
+
+### Описание
 
 ### Цели и задачи
 
@@ -36,24 +40,26 @@
 ### Инструкция по запуску
 
 1. Клонируйте репозиторий:
+
 ```bash
 git clone https://github.com/bareckij/algs_labs.git
 ```
 
 2. Перейдите в папку с проектом:
+
 ```bash
-cd alg_lab3
+cd alg_lab
 ```
 
 3. Запуск всех лабараторных
+
 ```bash
 for script in alg_lab*/*/src/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
 
 4. Запуску всех тестов
+
 ```bash
 pytest alg_lab*/task*/test/*.py
 
-for script in alg_lab*/*/test/*.py; do PYTHONPATH=$(pwd) python "$script"; done
 ```
-
