@@ -16,6 +16,8 @@ def longest_common_subsequence(a, b):
     return dp[n][m]
 
 if __name__ == "__main__":
-  data = utils.read_data_from_file('alg_lab7/task4/textf/input.txt')
-  res = longest_common_subsequence(data[1], data[3])
-  utils.write_data_to_file("alg_lab7/task4/textf/output.txt", str(res))
+    data = utils.read_data_from_file('alg_lab7/task4/textf/input.txt')
+    res = longest_common_subsequence(data[1], data[3])
+    utils.write_data_to_file("alg_lab7/task4/textf/output.txt", str(res))
+    print('lab7/task4')
+    print(res)

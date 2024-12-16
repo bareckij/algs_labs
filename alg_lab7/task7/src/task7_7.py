@@ -21,11 +21,16 @@ def is_match(pattern, string):
     return dp[m][n]
 
 if __name__ == '__main__':
+    print('lab7/task7')
+
     data = read_data_from_file('alg_lab7/task7/textf/input.txt')
     pattern = data[0].strip()  
     string = data[1].strip()   
     
     if is_match(pattern, string):
         write_data_to_file('alg_lab7/task7/textf/output.txt', ['YES'])
+        print('YES')
+
     else:
         write_data_to_file('alg_lab7/task7/textf/output.txt', ['NO'])
+        print('NO')

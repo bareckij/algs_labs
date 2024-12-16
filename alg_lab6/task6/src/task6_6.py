@@ -25,3 +25,5 @@ if __name__ == '__main__':
     queries = data[1:N+1]
     res = process_fibonacci_check(queries)
     utils.write_data_to_file('alg_lab6/task6/textf/output.txt', res)
+    print('lab6/task1')
+    print(res)

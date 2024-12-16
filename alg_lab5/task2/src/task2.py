@@ -30,3 +30,5 @@ if __name__ == "__main__":
     parent = utils.read_data_from_file('alg_lab5/task2/textf/input.txt')[1]
     result = calculate_tree_height(n, parent)
     utils.write_data_to_file('alg_lab5/task2/textf/output.txt', str(result))
+    print('lab5/task2')
+    print(result)

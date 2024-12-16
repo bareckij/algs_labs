@@ -40,3 +40,5 @@ if __name__ == "__main__":
     packets = utils.read_data_from_file('alg_lab5/task3/textf/input.txt')[1:]
     result = process_packets(S, n, packets)
     utils.write_data_to_file('alg_lab5/task3/textf/output.txt', result)
+    print('lab5/task2')
+    print(result)

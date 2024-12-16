@@ -22,3 +22,5 @@ if __name__ == '__main__':
     AC, BC, AD, BD = data[1]
     X, A, B = process_operations(N, X, A, B, AC, BC, AD, BD)
     write_data_to_file('alg_lab6/task8/textf/output.txt', [X, A, B])
+    print('lab6/task8')
+    print([X, A, B])

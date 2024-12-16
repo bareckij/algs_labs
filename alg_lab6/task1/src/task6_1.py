@@ -28,3 +28,5 @@ if __name__ =='__main__':
     operations = data[1:]
     result = process_operations(n, operations)
     write_data_to_file('alg_lab6/task1/textf/output.txt', result)
+    print('lab6/task1')
+    print(result)

@@ -45,3 +45,5 @@ if __name__ == '__main__':
     counts = data[2] if len(data) > 2 else None
     result = process_operations(money, k, coins, counts)
     write_data_to_file('alg_lab7/task1/textf/output.txt', [str(result)])
+    print('lab7/task1')
+    print(result)

@@ -34,3 +34,5 @@ if __name__ == '__main__':
     queries = data[1:]    
     result = process_phonebook_queries(n, queries)
     write_data_to_file('alg_lab6/task2/textf/output.txt', result)
+    print('lab6/task1')
+    print(result)

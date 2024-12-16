@@ -19,3 +19,5 @@ if __name__ == "__main__":
   data = utils.read_data_from_file('alg_lab7/task5/textf/input.txt')
   res = longest_common_subsequence(data[1], data[3], data[5])
   utils.write_data_to_file("alg_lab7/task5/textf/output.txt", str(res))
+  print('lab7/task5')
+  print(res)
