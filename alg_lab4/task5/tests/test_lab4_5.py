@@ -1,9 +1,9 @@
-import unittest_should
+import unittest
 import time
 import tracemalloc
 from alg_lab4.task5.src.task5 import process_commands
 
-class test_shouldTask5(unittest_should.test_shouldCase):
+class test_shouldTask5(unittest.TestCase):
 
     def test_should_stack_operations(self):
         # Given
@@ -75,4 +75,4 @@ class test_shouldTask5(unittest_should.test_shouldCase):
         self.assertLess(peak / 10**6, 256)
 
 if __name__ == "__main__":
-    unittest_should.main()
+    unittest.main()

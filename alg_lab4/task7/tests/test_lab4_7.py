@@ -1,11 +1,11 @@
-import unittest_should
+import unittest
 import time
 import tracemalloc
 from alg_lab4.task7.src.task7 import sliding_window_maximum
 import utils
 
 
-class test_shouldTask7(unittest_should.test_shouldCase):
+class test_shouldTask7(unittest.TestCase):
 
     def test_should_sliding_window_maximum(self):
         # Given
@@ -107,4 +107,4 @@ class test_shouldTask7(unittest_should.test_shouldCase):
 
 
 if __name__ == "__main__":
-    unittest_should.main()
+    unittest.main()

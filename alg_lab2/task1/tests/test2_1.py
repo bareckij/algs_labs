@@ -30,6 +30,8 @@ class TestMergeSort(unittest.TestCase):
 
     def test_memory(self):
         # Given
+        arr = [i for i in range(10000, 0, -1)]
+        n = len(arr)
         tracemalloc.start()
         # When
         merge_sort(arr, 0, n - 1)

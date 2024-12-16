@@ -61,8 +61,8 @@ def process_operations(n, operations):
     return result
 
 if __name__ == '__main__':
-    data = utils.read_data_from_file('alg_lab6/Task4/textf/input.txt')
+    data = utils.read_data_from_file('alg_lab6/task4/textf/input.txt')
     n = int(data[0])
     operations = data[1:]
     result = process_operations(n, operations)
-    utils.write_data_to_file('alg_lab6/Task4/textf/output.txt', result)
+    utils.write_data_to_file('alg_lab6/task4/textf/output.txt', result)

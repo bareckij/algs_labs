@@ -27,6 +27,7 @@ class TestMergeSort(unittest.TestCase):
         self.assertLess(execution_time, 2)
     def test_memory(self):
         # Given
+        n, arr = utils.read_data_from_file('alg_lab2/task10/textf/input.txt')
         tracemalloc.start()
         # When
         merge_sort(arr, 0, n-1)

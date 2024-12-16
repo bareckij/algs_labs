@@ -31,6 +31,8 @@ class TestBinarySearch(unittest.TestCase):
 
     def test_memory(self):
         # Given
+        arr = [i for i in range(1000000)]
+        search_nums = [500, 1000000, 999999]
         tracemalloc.start()
         # When
         results = [binary_search(arr, num) for num in search_nums]

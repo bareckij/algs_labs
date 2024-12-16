@@ -1,9 +1,9 @@
-import unittest_should
+import unittest
 import time
 import tracemalloc
 from alg_lab7.task1.src.task7_1 import process_operations
 
-class test_shouldCoinChange(unittest_should.test_shouldCase):
+class test_shouldCoinChange(unittest.TestCase):
 
     def test_should_should_coin_change_unlimited(self):
         # Given
@@ -69,4 +69,4 @@ class test_shouldCoinChange(unittest_should.test_shouldCase):
         self.assertLess(peak / 10**6, 256)
 
 if __name__ == '__main__':
-    unittest_should.main()
+    unittest.main()

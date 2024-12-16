@@ -26,6 +26,7 @@ class TestMajorityElement(unittest.TestCase):
         self.assertLess(execution_time, 2)
     def test_memory(self):
         # Given
+        arr = [3] * 100000 + [1] * 500000
         tracemalloc.start()
         # When
         result = is_majority_element(arr)
